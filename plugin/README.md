@@ -12,7 +12,7 @@ rtfm search-code "lifespan" --library fastapi --context 3
 rtfm show RESULT_ID
 ```
 
-Replace `RESULT_ID` with an ID returned by documentation search. Use `rtfm discover ecosystem:name@exact-version` for explicit registry metadata lookup and `rtfm add ecosystem:name@exact-version --project` to configure a published artifact; then explicitly update the printed source name. Separate sources can bind to the same package with `add NAME LOCATION --project --package SPEC --role docs|code|both`; verify repository release correspondence before binding. See the [dependency coverage guide](../docs/usage.md#discover-dependency-coverage) for coverage evidence and supported manifests.
+Replace `RESULT_ID` with an ID returned by documentation search. Use `rtfm discover ecosystem:name@exact-version` for explicit registry metadata lookup and `rtfm add ecosystem:name@exact-version --project` to configure a published artifact; then explicitly update the printed source name. Separate sources can bind to the same package with `add NAME LOCATION --project --package SPEC --role docs|code|both`; verify repository release correspondence before binding. See the [dependency coverage guide](../docs/usage.md#discover-dependency-coverage) for interpreting coverage.
 
 For RTFM 1.4+, global `--output json` exposes versioned outcomes and contextual recovery actions; check `ok`, then inspect `data` or `error`. Execute authorized actions using their argument arrays and working directory, and check search `data.has_more` and excerpt truncation. Legacy `--json` payloads remain supported.
 
