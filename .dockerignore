@@ -1,0 +1,10 @@
+.git
+.buildx
+build.json
+image.env
+.tekton
+test-results
+.cache
+.venv
+__pycache__
+rust/target

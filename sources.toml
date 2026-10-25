@@ -1,0 +1,457 @@
+# Optional public source catalog: rtfm init --source sources.toml.
+# HEAD tracks upstream development, not your installed dependency version.
+# Use a verified release ref for version-specific questions.
+# Run update NAME to fetch one source; update alone fetches every enabled source.
+# To start empty instead, run rtfm init without --source.
+update_interval_seconds = 900
+
+[sources."fastapi"]
+kind = "git"
+location = "https://github.com/fastapi/fastapi"
+refs = ["HEAD"]
+docs = ["docs/en/docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = true
+
+[sources."pydantic"]
+kind = "git"
+location = "https://github.com/pydantic/pydantic"
+refs = ["HEAD"]
+docs = ["docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = true
+
+[sources."strawberry-graphql"]
+kind = "git"
+location = "https://github.com/strawberry-graphql/strawberry"
+refs = ["HEAD"]
+docs = ["docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."litellm"]
+kind = "git"
+location = "https://github.com/BerriAI/litellm"
+refs = ["HEAD"]
+docs = ["docs/my-website/docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."opentelemetry"]
+kind = "git"
+location = "https://github.com/open-telemetry/opentelemetry.io"
+refs = ["HEAD"]
+docs = ["content/en/docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."react"]
+kind = "git"
+location = "https://github.com/reactjs/react.dev"
+refs = ["HEAD"]
+docs = ["src/content/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = true
+
+[sources."tailwindcss"]
+kind = "git"
+location = "https://github.com/tailwindlabs/tailwindcss.com"
+refs = ["HEAD"]
+docs = ["src/docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."vite"]
+kind = "git"
+location = "https://github.com/vitejs/vite"
+refs = ["HEAD"]
+docs = ["docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."playwright"]
+kind = "git"
+location = "https://github.com/microsoft/playwright"
+refs = ["HEAD"]
+docs = ["docs/src/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = true
+
+[sources."langfuse"]
+kind = "git"
+location = "https://github.com/langfuse/langfuse-docs"
+refs = ["HEAD"]
+docs = ["content/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = true
+
+[sources."signoz"]
+kind = "git"
+location = "https://github.com/SigNoz/signoz-web"
+refs = ["HEAD"]
+docs = ["data/docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."caddy"]
+kind = "git"
+location = "https://github.com/caddyserver/website"
+refs = ["HEAD"]
+docs = ["src/docs/markdown/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."vllm"]
+kind = "git"
+location = "https://github.com/vllm-project/vllm"
+refs = ["HEAD"]
+docs = ["docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = true
+
+[sources."chromadb"]
+kind = "git"
+location = "https://github.com/chroma-core/docs"
+refs = ["HEAD"]
+docs = ["docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = true
+
+[sources."uvicorn"]
+kind = "git"
+location = "https://github.com/encode/uvicorn"
+refs = ["HEAD"]
+docs = ["docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."claude-code"]
+kind = "url"
+location = "https://code.claude.com/docs/llms.txt"
+refs = ["HEAD"]
+docs = ["**/*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."langgraph"]
+kind = "git"
+location = "https://github.com/langchain-ai/docs"
+refs = ["HEAD"]
+docs = ["src/oss/langgraph/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."langchain"]
+kind = "git"
+location = "https://github.com/langchain-ai/docs"
+refs = ["HEAD"]
+docs = ["src/oss/langchain/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."openai-python"]
+kind = "git"
+location = "https://github.com/openai/openai-python"
+refs = ["HEAD"]
+docs = ["**/*.md", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."anthropic-python"]
+kind = "git"
+location = "https://github.com/anthropics/anthropic-sdk-python"
+refs = ["HEAD"]
+docs = ["**/*.md", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."llamaindex"]
+kind = "git"
+location = "https://github.com/run-llama/llama_index"
+refs = ["HEAD"]
+docs = ["docs/src/content/docs/framework/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."spacy"]
+kind = "git"
+location = "https://github.com/explosion/spaCy"
+refs = ["HEAD"]
+docs = ["website/docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."react-router"]
+kind = "git"
+location = "https://github.com/remix-run/react-router"
+refs = ["HEAD"]
+docs = ["docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."text-embeddings-inference"]
+kind = "git"
+location = "https://github.com/huggingface/text-embeddings-inference"
+refs = ["HEAD"]
+docs = ["docs/source/en/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."sentence-transformers"]
+kind = "git"
+location = "https://github.com/huggingface/sentence-transformers"
+refs = ["HEAD"]
+docs = ["docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."httpx"]
+kind = "git"
+location = "https://github.com/encode/httpx"
+refs = ["HEAD"]
+docs = ["docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."pytest"]
+kind = "git"
+location = "https://github.com/pytest-dev/pytest"
+refs = ["HEAD"]
+docs = ["doc/en/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = true
+
+[sources."hypothesis"]
+kind = "git"
+location = "https://github.com/HypothesisWorks/hypothesis"
+refs = ["HEAD"]
+docs = ["hypothesis-python/docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."requests"]
+kind = "git"
+location = "https://github.com/psf/requests"
+refs = ["HEAD"]
+docs = ["docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."aiohttp"]
+kind = "git"
+location = "https://github.com/aio-libs/aiohttp"
+refs = ["HEAD"]
+docs = ["docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."pillow"]
+kind = "git"
+location = "https://github.com/python-pillow/Pillow"
+refs = ["HEAD"]
+docs = ["docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."ruff"]
+kind = "git"
+location = "https://github.com/astral-sh/ruff"
+refs = ["HEAD"]
+docs = ["docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."docker-py"]
+kind = "git"
+location = "https://github.com/docker/docker-py"
+refs = ["HEAD"]
+docs = ["docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."neo4j"]
+kind = "git"
+location = "https://github.com/neo4j/neo4j-python-driver"
+refs = ["HEAD"]
+docs = ["docs/source/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."qdrant-client"]
+kind = "git"
+location = "https://github.com/qdrant/qdrant-client"
+refs = ["HEAD"]
+docs = ["docs/source/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."python-gitlab"]
+kind = "git"
+location = "https://github.com/python-gitlab/python-gitlab"
+refs = ["HEAD"]
+docs = ["docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."apscheduler"]
+kind = "git"
+location = "https://github.com/agronholm/apscheduler"
+refs = ["HEAD"]
+docs = ["docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."pymupdf"]
+kind = "git"
+location = "https://github.com/pymupdf/PyMuPDF"
+refs = ["HEAD"]
+docs = ["docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."diskcache"]
+kind = "git"
+location = "https://github.com/grantjenks/python-diskcache"
+refs = ["HEAD"]
+docs = ["docs/**/*", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."tqdm"]
+kind = "git"
+location = "https://github.com/tqdm/tqdm"
+refs = ["HEAD"]
+docs = ["**/*.md", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."pyyaml"]
+kind = "git"
+location = "https://github.com/yaml/pyyaml"
+refs = ["HEAD"]
+docs = ["**/*.md", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."python-dotenv"]
+kind = "git"
+location = "https://github.com/theskumar/python-dotenv"
+refs = ["HEAD"]
+docs = ["**/*.md", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."python-multipart"]
+kind = "git"
+location = "https://github.com/Kludex/python-multipart"
+refs = ["HEAD"]
+docs = ["**/*.md", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."readability-lxml"]
+kind = "git"
+location = "https://github.com/buriy/python-readability"
+refs = ["HEAD"]
+docs = ["**/*.md", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."retry"]
+kind = "git"
+location = "https://github.com/invl/retry"
+refs = ["HEAD"]
+docs = ["**/*.md", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."playwright-stealth"]
+kind = "git"
+location = "https://github.com/AtuboDad/playwright_stealth"
+refs = ["HEAD"]
+docs = ["**/*.md", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+
+[sources."wikitextparser"]
+kind = "git"
+location = "https://github.com/5j9/wikitextparser"
+refs = ["HEAD"]
+docs = ["**/*.md", "**/README*"]
+code = ["**/*.py", "**/*.rs", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.go", "**/*.c", "**/*.h", "**/*.cpp"]
+exclude = ["**/changelog*", "**/CHANGELOG*", "**/release-notes*", "**/announce/**", "**/proposals/**", "**/node_modules/**", "**/vendor/**", "**/tests/**", "**/test/**"]
+enabled = false
+# These upstreams publish docs in separate repositories. Keep implementation
+# provenance separate rather than claiming docs and code share one revision.
+[sources.react-code]
+kind = "git"
+location = "https://github.com/facebook/react"
+refs = ["HEAD"]
+docs = []
+code = ["packages/**/*.js", "packages/**/*.ts", "packages/**/*.tsx"]
+exclude = ["**/__tests__/**", "**/node_modules/**"]
+enabled = true
+
+[sources.chromadb-code]
+kind = "git"
+location = "https://github.com/chroma-core/chroma"
+refs = ["HEAD"]
+docs = []
+code = ["chromadb/**/*.py", "rust/**/*.rs"]
+exclude = ["**/test/**", "**/tests/**"]
+enabled = true
+
+[sources.langfuse-code]
+kind = "git"
+location = "https://github.com/langfuse/langfuse"
+refs = ["HEAD"]
+docs = []
+code = ["web/src/**/*.ts", "web/src/**/*.tsx", "worker/src/**/*.ts", "packages/**/*.ts"]
+exclude = ["**/node_modules/**", "**/__tests__/**"]
+enabled = true

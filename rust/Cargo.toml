@@ -1,0 +1,37 @@
+[package]
+name = "rtfm"
+version = "1.4.0"
+edition = "2021"
+rust-version = "1.99"
+license = "CC-BY-NC-4.0"
+repository = "https://github.com/phishingupstream/rtfm"
+description = "Offline documentation and source search with SQLite FTS5"
+
+[[bin]]
+name = "rtfm"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+libc = "0.2"
+base64 = "0.22"
+clap = { version = "4", features = ["derive", "env"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+rusqlite = { version = "0.32", features = ["bundled"] }
+globset = "0.4"
+regex = "1"
+walkdir = "2"
+sha2 = "0.10"
+fs2 = "0.4"
+tempfile = "3"
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls"] }
+url = "2"
+tar = "0.4"
+flate2 = "1"
+zip = { version = "2", default-features = false, features = ["deflate"] }
+
+[profile.release]
+lto = "thin"
+strip = true

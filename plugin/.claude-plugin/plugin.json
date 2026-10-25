@@ -1,0 +1,15 @@
+{
+  "name": "rtfm",
+  "version": "1.4.0",
+  "description": "Resolve API and version uncertainty using the local RTFM documentation and source cache",
+  "author": {
+    "name": "Tom Salmon"
+  },
+  "keywords": [
+    "docs",
+    "documentation",
+    "search",
+    "source",
+    "rtfm"
+  ]
+}

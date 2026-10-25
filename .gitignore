@@ -1,0 +1,25 @@
+# Rust build and profiling output
+rust/target/
+rust/perf.data*
+
+# Local configuration, caches, and Python benchmark output
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.cache/
+
+# Build and verification evidence
+.buildx/
+build.json
+image.env
+test-results/
+*.log
+
+# Editors and OS metadata
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
