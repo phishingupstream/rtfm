@@ -1,7 +1,7 @@
 {
   "name": "rtfm",
   "version": "1.4.0",
-  "description": "Resolve API and version uncertainty using the local RTFM documentation and source cache",
+  "description": "man for agents. Find your project's dependencies. Cache their docs and source. Ready to grep, managed by your agent.",
   "author": {
     "name": "Tom Salmon"
   },

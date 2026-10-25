@@ -5,7 +5,7 @@ edition = "2021"
 rust-version = "1.99"
 license = "CC-BY-NC-4.0"
 repository = "https://github.com/phishingupstream/rtfm"
-description = "Offline documentation and source search with SQLite FTS5"
+description = "man for agents. Find your project's dependencies. Cache their docs and source. Ready to grep, managed by your agent."
 
 [[bin]]
 name = "rtfm"

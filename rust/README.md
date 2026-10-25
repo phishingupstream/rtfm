@@ -1,3 +1,3 @@
 # RTFM Rust CLI
 
-The standalone `rtfm` executable lives here. Use the [repository README](../README.md) for installation, cache/source management, version selection, and verification, and [agent guidance](../AGENTS.md) for repository contracts.
+The standalone `rtfm` executable lives here. Start with the [repository README](../README.md); use the [usage guide](../docs/usage.md) for sources and versions, the [development guide](../docs/development.md#develop-and-verify) for verification, and [agent guidance](../AGENTS.md) for repository contracts.

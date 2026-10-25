@@ -1,6 +1,6 @@
 # RTFM agent guidance
 
-RTFM is a standalone Rust CLI for a versioned local documentation and source cache. Read [README.md](README.md) for installation, commands, configuration precedence, import, and recovery; use `rtfm --help` and subcommand help for syntax. [REQUIREMENTS.md](REQUIREMENTS.md) defines approved product behavior; trace behavior changes and verification to its IDs and update it before adding or removing capabilities.
+RTFM is a standalone Rust CLI for a versioned local documentation and source cache. Read [README.md](README.md) for installation and first use, and [the usage guide](docs/usage.md) for source management, configuration and recovery; use `rtfm --help` and subcommand help for syntax. [REQUIREMENTS.md](REQUIREMENTS.md) defines approved product behavior; trace behavior changes and verification to its IDs and update it before adding or removing capabilities.
 
 ## Change ownership
 
@@ -20,12 +20,12 @@ RTFM is a standalone Rust CLI for a versioned local documentation and source cac
 
 ## Contracts
 
-- Dependency inventory and coverage stay offline; registry discovery is explicit and never infers release correspondence from repository names or tags. Follow [README.md](README.md#discover-dependency-coverage) for package bindings and project overrides.
+- Dependency inventory and coverage stay offline; registry discovery is explicit and never infers release correspondence from repository names or tags. Follow [the usage guide](docs/usage.md#discover-dependency-coverage) for package bindings and project overrides.
 - Search and inspection operate offline. Network/source refresh belongs to explicit `update` or the bounded session-start `update-if-due` integration. Do not add daemons, model services, embeddings, or a separate search server.
 - Preserve complete source trees and previously published revisions. Never move, delete, edit, or live-patch imported originals or third-party libraries. Local imports make owned copies; Git origins use installed Git and owned detached checkouts sharing cached objects; recursively populated submodules follow the recorded gitlinks. Publish completed snapshots atomically. Failed acquisition/indexing leaves the last good version searchable.
 - Match dependency versions to configured refs or exact cached revisions. Keep branch refresh distinct from immutable tag/commit pins, and preserve project `.rtfm.toml` selection semantics. Searches return revision, provenance, local path, and exact line range; `search` ranks documentation with BM25; `search-code` scans configured source files literally unless `--regex` is explicit. Do not index code chunks.
-- Keep configuration and cache independent of former server storage. Defaults, override precedence, update interval, and failure recovery have one operational authority in [README.md](README.md).
+- Keep configuration and cache independent of former server storage. Defaults, override precedence, update interval, and failure recovery have one operational authority in [the usage guide](docs/usage.md#configuration-and-refresh-behavior).
 
 ## Verification
 
-Run the Cargo checks and container installation tests in [README.md](README.md#develop-and-verify). Preserve observable offline lookup, version selection, docs/code separation, complete acquisition and failure-preservation tests. Use repository-owned Bake targets for container builds. Keep README, requirements, source catalog and plugin consistent. Public releases contain the tested source commit, license, supported-platform binary and checksums.
+Run the Cargo checks and container installation tests in [the development guide](docs/development.md#develop-and-verify). Preserve observable offline lookup, version selection, docs/code separation, complete acquisition and failure-preservation tests. Use repository-owned Bake targets for container builds. Keep README, requirements, source catalog and plugin consistent. Public releases contain the tested source commit, license, supported-platform binary and checksums.
